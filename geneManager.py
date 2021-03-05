@@ -15,6 +15,7 @@ class GeneManager:
     def compileAllData(self):
         geneAgg = ga.GeneAgglomerator()
         dataComparator = dc.DataComparator(geneAgg)
+        dataComparator.dotTestGenes()
         dataComparator.dotAllGenePairs()
         dataComparator.plotDottedData()
         dataComparator.dotEigenGenes()

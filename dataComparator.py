@@ -8,6 +8,12 @@ class DataComparator:
     def __init__(self, agglomerator):
         self.agglomerator = agglomerator
 
+    def dotTestGenes(self):
+        testDF = self.getDotProductDataFrame(self.agglomerator.testGenes.genes, self.agglomerator.testGenes.genes)
+        ax = sns.heatmap(testDF, vmin=0.0, vmax=1.0)
+        plt.title('Test dot products')
+        plt.show()
+
     def dotEigenGenes(self):
         eyeEG = self.agglomerator.eyeGenes.getStrongestEigenGene()
         hairEG = self.agglomerator.hairGenes.getStrongestEigenGene()

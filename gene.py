@@ -7,6 +7,7 @@ class GeneType(Enum):
     HAIRCOLOR = 2
     METABOLISM = 3
     DIGESTION = 4
+    TEST = 5
 
 class GenePurpose(Enum):
     CONTRIBUTER = 1
